@@ -1,8 +1,8 @@
-# flutter_widgets_demo
+## Para rodar a aplicação
 
-A new Flutter application.
+> flutter doctor
 
-## Getting Started
+> flutter run
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+
+Curso elaborado na [Udemy](https://www.udemy.com/flutter-conhecendo-na-pratica/learn/v4/).
