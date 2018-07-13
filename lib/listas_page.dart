@@ -21,6 +21,10 @@ class _ListasPageState extends State<ListasPage> {
   PersistentBottomSheetController<Null> _bottomSheet;
   _MaterialListType _itemType = _MaterialListType.tresLinhas;
   bool ordenacaoReversa = false;
+
+  bool _showAvatars = true;
+  bool _showIcons = false;
+
   List<String> items = <String>[
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'X', 'Z'
   ];
@@ -74,7 +78,36 @@ class _ListasPageState extends State<ListasPage> {
                 ),
               ),
             ),
-          ],
+            new MergeSemantics(
+              child: ListTile(
+                dense: true,
+                title: const Text('Show Avatar'),
+                trailing: Checkbox(
+                  value: _showAvatars,
+                  onChanged: (bool value) {
+                    setState(() {
+                      _showAvatars = value;
+                    });
+                    _bottomSheet?.setState(() {});
+                  }
+                ),
+              )
+            ),
+            new MergeSemantics(
+              child: ListTile(
+                dense: true,
+                title: const Text('Show Ícone'),
+                trailing: Checkbox(
+                  value: _showIcons,
+                  onChanged: (bool value) {
+                    setState(() {
+                      _showIcons = value;
+                    });
+                    _bottomSheet?.setState(() {});
+                  }
+                ),
+              )
+            ),          ],
         ),
       );
     });
@@ -104,6 +137,8 @@ class _ListasPageState extends State<ListasPage> {
     return new MergeSemantics(
       child: new ListTile(
         isThreeLine: _itemType == _MaterialListType.tresLinhas,
+        leading: _showAvatars ? ExcludeSemantics(child: CircleAvatar(child: Text(item))): null,
+        trailing: _showIcons ? Icon(Icons.info, color: Theme.of(context).disabledColor) : null,
         title: new Text('Esse item representa a letra $item.'),
         subtitle: secondary,
       ),
