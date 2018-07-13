@@ -1,5 +1,42 @@
 import 'package:flutter/material.dart';
 
+class CardViagem{
+  const CardViagem({
+    this.titulo,
+    this.descricao
+  });
+
+  final String titulo;
+  final List<String> descricao;
+}
+
+final List<CardViagem> destinos = <CardViagem>[
+  const CardViagem(
+    titulo: 'Rio de Janeiro',
+    descricao: const <String>[
+      'Pão de Açucar',
+      'Cristo Redentor',
+      'Maracanã'
+    ],
+  ),
+  const CardViagem(
+    titulo: 'São Paulo',
+    descricao: const <String>[
+      'Av. Paulista',
+      'Morumbi',
+      'Mercadão'
+    ]
+  ),
+  const CardViagem(
+    titulo: 'Cuiabá',
+    descricao: const <String>[
+      'Orla do Porto',
+      'Prainha',
+      'Chapada dos Guimarães'
+    ]
+  )
+];
+
 
 class CardsPage extends StatefulWidget {
   @override
