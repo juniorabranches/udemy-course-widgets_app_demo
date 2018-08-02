@@ -1,8 +1,8 @@
-## Para rodar a aplicação
+# Aplicativo demonstração de Widgets do Flutter, curso realizado na Udemy / Flutter Widget demo application, course made from Udemy
 
-> flutter doctor
-
-> flutter run
+## Obtenha o curso em [Udemy](https://www.udemy.com/flutter-conhecendo-na-pratica/) / Get this cours in [Udemy](https://www.udemy.com/flutter-conhecendo-na-pratica/)
 
 
-Curso elaborado na [Udemy](https://www.udemy.com/flutter-conhecendo-na-pratica/learn/v4/).
+## Telas / Screens: 
+
+![View this](lib/assets/1.png)
